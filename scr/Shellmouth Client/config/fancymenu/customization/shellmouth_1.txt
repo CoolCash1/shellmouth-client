@@ -1,0 +1,110 @@
+type = menu
+
+customization-meta {
+  identifier = shellmouth
+  renderorder = foreground
+}
+
+customization {
+  path = shellmouth/Assets/Textures/menu/bg.png
+  action = texturizebackground
+}
+
+customization {
+  orientation = mid-centered
+  buttonaction = opengui
+  x = -100
+  width = 200
+  action = addbutton
+  y = -41
+  backgroundhovered = shellmouth/Assets/Textures/button/medium.png
+  label = Singleplayer
+  backgroundnormal = shellmouth/Assets/Textures/button/long.png
+  value = net.minecraft.client.gui.GuiSelectWorld
+  height = 40
+}
+
+customization {
+  orientation = mid-centered
+  buttonaction = opengui
+  x = -100
+  width = 200
+  action = addbutton
+  y = 1
+  backgroundhovered = shellmouth/Assets/Textures/button/long.png
+  label = Multiplayer
+  backgroundnormal = shellmouth/Assets/Textures/button/long.png
+  value = net.minecraft.client.gui.GuiMultiplayer
+  height = 40
+}
+
+customization {
+  orientation = bottom-centered
+  buttonaction = opengui
+  x = -42
+  width = 40
+  action = addbutton
+  y = -44
+  backgroundhovered = shellmouth/Assets/Textures/button/smallcog.png
+  description = Settings
+  label = 
+  backgroundnormal = shellmouth/Assets/Textures/button/smallcog.png
+  value = net.minecraft.client.gui.GuiOptions
+  height = 40
+}
+
+customization {
+  orientation = bottom-centered
+  buttonaction = quitgame
+  x = 46
+  width = 40
+  action = addbutton
+  y = -44
+  backgroundhovered = shellmouth/Assets/Textures/button/smallexit.png
+  description = Exit to desktop
+  label = 
+  backgroundnormal = shellmouth/Assets/Textures/button/smallexit.png
+  value = 
+  height = 40
+}
+
+customization {
+  orientation = bottom-centered
+  buttonaction = opengui
+  x = 2
+  width = 40
+  action = addbutton
+  y = -44
+  backgroundhovered = shellmouth/Assets/Textures/button/smalllang.png
+  description = Language
+  label = 
+  backgroundnormal = shellmouth/Assets/Textures/button/smalllang.png
+  value = net.minecraft.client.gui.GuiLanguage
+  height = 40
+}
+
+customization {
+  orientation = bottom-centered
+  buttonaction = opengui
+  x = -86
+  width = 40
+  action = addbutton
+  y = -44
+  backgroundhovered = shellmouth/Assets/Textures/button/small_play.png
+  description = Replays
+  label = 
+  backgroundnormal = shellmouth/Assets/Textures/button/small_play.png
+  value = com.replaymod.lib.de.johni0702.minecraft.gui.container.AbstractGuiScreen$MinecraftGuiScreen
+  height = 40
+}
+
+customization {
+  path = shellmouth/Assets/Textures/Logo/mainmenu.png
+  orientation = top-centered
+  x = -250
+  width = 500
+  action = addtexture
+  y = 18
+  height = 100
+}
+

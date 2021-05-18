@@ -1,0 +1,46 @@
+{
+  "releaseTime": "1979-06-01T00:00:00-05:00",
+  "mainClass": "net.minecraft.launchwrapper.Launch",
+  "mcVersion": "1.16.5",
+  "libraries": [
+    {
+      "name": "com.mtbs3d:minecrift:1.16.5-jrbudda-7-1",
+      "MMC-hint": "local"
+    },
+    {"name": "optifine:OptiFine:1.16.5_HD_U_G6_LIB"},
+    {
+      "name": "org.ow2.asm:asm-all:5.2",
+      "url": "http://files.minecraftforge.net/maven/"
+    },
+    {
+      "name": "org.json:json:20140107",
+      "url": "http://vivecraft.org/jar/"
+    },
+    {
+      "name": "net.minecraft:launchwrapper:2.2",
+      "url": "http://vivecraft.org/jar/"
+    },
+    {
+      "name": "com.sun:jna:4.2.1",
+      "url": "http://vivecraft.org/jar/"
+    },
+    {
+      "name": "io.github.classgraph:classgraph:4.8.78",
+      "url": "https://repo1.maven.org/maven2/"
+    }
+  ],
+  "type": "release",
+  "version": "1.16.5-jrbudda-7-1",
+  "inheritsFrom": "1.16.5",
+  "name": "Vivecraft",
+  "arguments": {"game": [
+    "--tweakClass",
+    "optifine.OptiFineTweaker",
+    "--tweakClass",
+    "org.vivecraft.tweaker.MinecriftVanillaTweaker"
+  ]},
+  "time": "1979-06-01T00:00:00-05:00",
+  "id": "vivecraft-1.16.5-jrbudda-7-1",
+  "order": 6,
+  "fileId": "vivecraft-1.16.5-jrbudda-7-1"
+}

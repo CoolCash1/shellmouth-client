@@ -1,0 +1,218 @@
+type = menu
+
+customization-meta {
+  identifier = net.minecraft.client.gui.GuiMainMenu
+  renderorder = background
+}
+
+customization {
+  identifier = %id=376382%
+  orientation = bottom-centered
+  x = 2
+  action = movebutton
+  y = -49
+}
+
+customization {
+  identifier = %id=376382%
+  width = 40
+  action = resizebutton
+  height = 40
+}
+
+customization {
+  identifier = %id=376382%
+  action = setbuttontexture
+  backgroundhovered = shellmouth/Assets/Textures/button/smalllang.png
+  backgroundnormal = shellmouth/Assets/Textures/button/smalllang.png
+}
+
+customization {
+  identifier = %id=400356%
+  action = hidebutton
+}
+
+customization {
+  identifier = %id=400274%
+  orientation = mid-centered
+  x = -100
+  action = movebutton
+  y = 2
+}
+
+customization {
+  identifier = %id=400274%
+  width = 200
+  action = resizebutton
+  height = 40
+}
+
+customization {
+  identifier = %id=400274%
+  action = setbuttontexture
+  backgroundhovered = shellmouth/Assets/Textures/button/long.png
+  backgroundnormal = shellmouth/Assets/Textures/button/long.png
+}
+
+customization {
+  identifier = %id=400322%
+  orientation = bottom-centered
+  x = -86
+  action = movebutton
+  y = -49
+}
+
+customization {
+  identifier = %id=400322%
+  width = 40
+  action = resizebutton
+  height = 40
+}
+
+customization {
+  identifier = %id=400322%
+  action = setbuttonlabel
+  value = 
+}
+
+customization {
+  identifier = %id=400322%
+  action = setbuttontexture
+  backgroundhovered = shellmouth/Assets/Textures/button/small_wrench.png
+  backgroundnormal = shellmouth/Assets/Textures/button/small_wrench.png
+}
+
+customization {
+  identifier = %id=502322%
+  orientation = bottom-centered
+  x = 46
+  action = movebutton
+  y = -49
+}
+
+customization {
+  identifier = %id=502322%
+  width = 40
+  action = resizebutton
+  height = 40
+}
+
+customization {
+  identifier = %id=502322%
+  action = setbuttonlabel
+  value = 
+}
+
+customization {
+  identifier = %id=502322%
+  action = setbuttontexture
+  backgroundhovered = shellmouth/Assets/Textures/button/smallrealm.png
+  backgroundnormal = shellmouth/Assets/Textures/button/smallrealm.png
+}
+
+customization {
+  identifier = %id=400382%
+  orientation = bottom-centered
+  x = -131
+  action = movebutton
+  y = -49
+}
+
+customization {
+  identifier = %id=400382%
+  width = 40
+  action = resizebutton
+  height = 40
+}
+
+customization {
+  identifier = %id=400382%
+  action = setbuttonlabel
+  value = 
+}
+
+customization {
+  identifier = %id=400382%
+  action = setbuttontexture
+  backgroundhovered = shellmouth/Assets/Textures/button/smallcog.png
+  backgroundnormal = shellmouth/Assets/Textures/button/smallcog.png
+}
+
+customization {
+  identifier = %id=502382%
+  orientation = bottom-centered
+  x = 90
+  action = movebutton
+  y = -49
+}
+
+customization {
+  identifier = %id=502382%
+  width = 40
+  action = resizebutton
+  height = 40
+}
+
+customization {
+  identifier = %id=502382%
+  action = setbuttonlabel
+  value = 
+}
+
+customization {
+  identifier = %id=502382%
+  action = setbuttontexture
+  backgroundhovered = shellmouth/Assets/Textures/button/smallexit.png
+  backgroundnormal = shellmouth/Assets/Textures/button/smallexit.png
+}
+
+customization {
+  identifier = %id=400298%
+  orientation = mid-centered
+  x = -100
+  action = movebutton
+  y = -42
+}
+
+customization {
+  identifier = %id=400298%
+  width = 200
+  action = resizebutton
+  height = 40
+}
+
+customization {
+  identifier = %id=400298%
+  action = setbuttontexture
+  backgroundhovered = shellmouth/Assets/Textures/button/long.png
+  backgroundnormal = shellmouth/Assets/Textures/button/long.png
+}
+
+customization {
+  identifier = %id=400346%
+  orientation = bottom-centered
+  x = -42
+  action = movebutton
+  y = -49
+}
+
+customization {
+  identifier = %id=400346%
+  width = 40
+  action = resizebutton
+  height = 40
+}
+
+customization {
+  identifier = %id=400346%
+  action = setbuttonlabel
+  value = 
+}
+
+customization {
+  identifier = %id=400346%
+  action = setbuttontexture
+  backgroundhovered = shellmouth/Assets/Textures/button/small_play.png
+  backgroundnormal = shellmouth/Assets/Textures/button/small_play.png
+}
+

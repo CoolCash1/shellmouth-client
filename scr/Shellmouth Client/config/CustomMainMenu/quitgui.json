@@ -1,0 +1,71 @@
+{
+    "images":
+    {
+        "title":
+        {
+            "image" : "custommainmenu:textures/gui/CustomMainMenu/Shellmouth/Graphics/logo.png",
+            "posX" : -137,
+            "posY" : 30,
+            "width" : 275,
+            "height" : 85,
+            "alignment" : "top_center"
+        }
+    },
+    
+    "buttons":
+    {       
+        "confrim":
+        {
+            "text" : "continue",
+            "posX" : -100,
+            "posY" : 172,
+            "width" : 98,
+            "height" : 40,
+            "texture" : "custommainmenu:textures/gui/CustomMainMenu/Shellmouth/Graphics/button/medium.png",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "options"
+            }
+        },
+        
+        "cancel":
+        {
+            "text" : "cancel",
+            "posX" : 2,
+            "posY" : 172,
+            "width" : 98,
+            "height" : 40,
+            "texture" : "custommainmenu:textures/gui/CustomMainMenu/Shellmouth/Graphics/button/medium.png",
+            "action" : 
+            {
+                "type" : "openGui",
+                "gui" : "quitgui"
+            }
+        }
+    },
+    
+    "labels":
+    {
+        "mojang":
+        {
+            "text" : "Are you sure you want to quit?",
+            "posX" : -197,
+            "posY" : -10,
+            "color" : -1,
+            "alignment" : "bottom_right"
+        }
+    },
+    
+    "other":
+    {
+        "panorama":
+        {
+            "images" : "minecraft:textures/gui/title/background/panorama_%c.png",
+            "animate" : true,
+            "animationSpeed" : 1,
+            "blur" : true,
+            "gradient" : true
+        }
+    }
+}

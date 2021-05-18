@@ -1,0 +1,83 @@
+type = menu
+
+customization-meta {
+  identifier = PackStore
+  renderorder = foreground
+}
+
+customization {
+  path = shellmouth/Assets/Textures/Logo/store.png
+  orientation = top-left
+  x = 50
+  width = 100
+  action = addtexture
+  y = 50
+  height = 100
+}
+
+customization {
+  orientation = top-left
+  shadow = false
+  centered = false
+  x = 164
+  action = addtext
+  y = 86
+  scale = 5.0
+  value = STORE
+}
+
+customization {
+  path = shellmouth/Assets/Textures/menu/store/store_item.png
+  orientation = mid-centered
+  x = -150
+  width = 300
+  action = addtexture
+  y = -50
+  height = 100
+}
+
+customization {
+  path = shellmouth/Assets/Textures/menu/store/packicons/cashpvp.png
+  orientation = mid-centered
+  x = 91
+  width = 50
+  action = addtexture
+  y = -41
+  height = 50
+}
+
+customization {
+  path = shellmouth/Assets/Textures/menu/store/store_imageoverlay.png
+  orientation = top-left
+  x = 329
+  width = 300
+  action = addtexture
+  y = 220
+  height = 100
+}
+
+customization {
+  orientation = top-left
+  shadow = false
+  centered = false
+  x = 338
+  action = addtext
+  y = 228
+  scale = 2.0
+  value = Cashton's PvP Pack
+}
+
+customization {
+  orientation = top-left
+  buttonaction = downloadfile
+  x = 494
+  width = 131
+  action = addbutton
+  y = 287
+  backgroundhovered = shellmouth/Assets/Textures/button/transparent.png
+  label = 
+  backgroundnormal = shellmouth/Assets/Textures/button/transparent.png
+  value = http://142.161.187.224/files/resource/packs/texture/Cashtons%20PvP%20Pack.zip;resourcepacks/Cashtons PvP Pack.zip
+  height = 25
+}
+
