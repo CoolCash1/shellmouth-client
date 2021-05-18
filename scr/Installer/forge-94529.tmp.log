@@ -1,0 +1,12 @@
+Exception in thread "main" java.lang.ExceptionInInitializerError
+	at net.minecraftforge.installer.ClientInstall.getSponsorMessage(ClientInstall.java:401)
+	at net.minecraftforge.installer.InstallerAction.getSponsorMessage(InstallerAction.java:60)
+	at net.minecraftforge.installer.InstallerPanel.updateFilePath(InstallerPanel.java:334)
+	at net.minecraftforge.installer.InstallerPanel.<init>(InstallerPanel.java:315)
+	at net.minecraftforge.installer.SimpleInstaller.launchGui(SimpleInstaller.java:164)
+	at net.minecraftforge.installer.SimpleInstaller.main(SimpleInstaller.java:51)
+Caused by: java.lang.ArrayIndexOutOfBoundsException: 1
+	at net.minecraftforge.installer.MirrorData.buildMirrorList(MirrorData.java:84)
+	at net.minecraftforge.installer.MirrorData.<init>(MirrorData.java:63)
+	at net.minecraftforge.installer.MirrorData.<clinit>(MirrorData.java:17)
+	... 6 more
