@@ -1,0 +1,16 @@
+[
+{
+  "modid": "sword",
+  "name": "Testing",
+  "description": "Cashtons Test Mod ",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["ExampleDude"],
+  "credits": "Yes",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
