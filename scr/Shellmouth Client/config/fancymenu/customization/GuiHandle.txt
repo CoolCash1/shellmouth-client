@@ -1,7 +1,0 @@
-type = menu
-
-customization-meta {
-  identifier = GuiHandle
-  renderorder = foreground
-}
-

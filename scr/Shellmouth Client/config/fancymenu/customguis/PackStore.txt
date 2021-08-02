@@ -1,3 +1,0 @@
-identifier = PackStore
-title = 
-allowesc = true
