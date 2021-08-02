@@ -14,11 +14,19 @@ I know a few languages including Python and some C++ as well as C#, I am current
 Here are the mods that were not created from within the repo
 
 Block Overlays by unknown
+
 CraftPresence by CDAGaming_ on CurseForge
+
 Custom Crosshair by Sparkless 101 on CurseForge
+
 Fancymenu by Keksuccino on CurseForge
+
 Keystrokes by Sk1er on sk1er.club
+
 Konkrete by Keksuccino on CurseForge
+
 ParticleMod by Warrior
+
 Replay Mod by CrushedPixel and johni0702 on https://www.replaymod.com/
+
 Orange's SimpleMods by Forge_User_17820861 on CurseForge
