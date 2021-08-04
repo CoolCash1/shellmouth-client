@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "shellcore",
+  "version": "${version}",
+
+  "name": "Shellmouth Client Core",
+  "description": "",
+  "authors": [
+    "Cashton Harmer",
+    "GitHub Contributors"
+  ],
+  "contact": {
+    "homepage": "https://github.com/CoolCash1/shellmouth-client",
+    "sources": "https://github.com/CoolCash1/shellmouth-client"
+  },
+
+  "license": "mit",
+  "icon": "assets/shellcore/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.cashton.shellmouthcore.ShellmouthCore"
+    ]
+  },
+  "mixins": [
+    "TitleScreenMixin"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": ">=16"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

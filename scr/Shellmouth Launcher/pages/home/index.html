@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@5.9.55/css/materialdesignicons.min.css">
+</head>
+<body style="margin: 0px; border-radius: 25px;">
+<div style="width: 800px; height: 600px; border-radius: 5px; background-color: var(--bg);" class="animated">
+    <header class="header-dark animated windowDragBar" style="height: 24px; border-top-left-radius: 5px; border-top-right-radius: 5px;">
+      <button class="btn-sm btn-red float-right text color-white noDrag" id="close-btn" style="margin-left: 4px;" onclick="window.close()"><span class="mdi mdi-close"></span></button>
+      <!-- <button class="btn-sm btn-transparent float-right text color-white" id="close-btn" style="margin-left: 4px;" onclick="openSettings()" id="settingsBtn"><span class="mdi mdi-cog header-dark-icon animated"></span></button> -->
+      <div class="dropdown float-left noDrag">
+        <button class="btn-sm btn-transparent color-white" style="margin-right: 4px;" id="optionDropdownBtn">
+          <span class="mdi mdi-menu-down header-dark-icon animated"></span>
+        </button>
+        <div class="dropdown-content animated" style="margin-top: 8px;">
+          <button class="btn-sm btn-transparent color-white animated color-theme-text" onclick="openVersion()">
+            <span class="mdi mdi-numeric dropdown-icon animated"></span>
+            Version
+          </button>
+          <button class="btn-sm btn-transparent color-white animated color-theme-text" onclick="theme = toggleTheme(theme)">
+            <span class="mdi mdi-theme-light-dark dropdown-icon animated"></span>
+            Theme
+          </button>
+          <button class="btn-sm btn-transparent color-white animated color-theme-text" onclick="theme = toggleTheme(theme)">
+            <span class="mdi mdi-texture-box dropdown-icon animated"></span>
+            Packs
+          </button>
+          <button class="btn-sm btn-transparent color-white animated color-theme-text" onclick="openMenu('jdkInstaller')">
+            <span class="mdi mdi-language-java dropdown-icon animated"></span>
+            Install JDK16
+          </button>
+          <!-- <button class="btn-sm btn-transparent color-white animated color-theme-text" onclick="videoEnabled = toggleVideo(videoEnabled)">Video</button> -->
+          <!-- <button class="btn-sm btn-transparent color-white" onclick="openSettings()">Settings</button> -->
+          <hr>
+          <button class="btn-sm btn-transparent color-white animated color-theme-text" onclick="openMenu('testWindow')">
+            <span class="mdi mdi-console dropdown-icon animated"></span>
+            DevMenu
+          </button>
+          <button class="btn-sm btn-transparent color-white animated color-theme-text" onclick="openLoginWindow()">
+            <span class="mdi mdi-logout dropdown-icon animated"></span>
+            Log Out
+          </button>
+        </div>
+      </div>
+      <!-- <button class="btn-sm btn-transparent float-right text color-white" id="min-btn" style="margin-left: 2px;" onclick="window.minimize()">_</button> -->
+      <!-- <div class="text color-white animated float-left" id="titleText">CashCraft Launcher</div> -->
+    </header>
+    <div id="mainContent">
+        <!-- Update Prompt Snackbar -->
+        <div class="snackbar text color-theme-text animated float-right" id="updateSnackbar">
+          Update Avalible
+          <button class="btn-toast btn-transparent float-right">Install</button>
+        </div>
+        <!-- Testing Snackbar -->
+        <div class="snackbar text color-theme-text animated float-right" id="testSnackbar">
+          Test Snackbar
+          <span class="mdi mdi-message-alert"></span>
+          <button class="btn-toast btn-transparent float-right">Button</button>
+        </div>
+        <!-- Crash Snackbar -->
+        <div class="snackbar text color-theme-text animated float-right" id="crashSnackbar">
+          Game Crashed!
+        </div>
+        <!-- Server Offline Snackbar -->
+        <div class="snackbar text color-theme-text animated float-right" id="offlineSnackbar">
+          CashCraft is offline
+          <button class="btn-toast btn-transparent float-right">Refresh</button>
+        </div>
+        <!-- BACKGROUND VIDEO -->
+        <img src="https://picsum.photos/800/600" class="bgvid" autoplay="true" height="600" id="bgVideo" loop muted style="border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; display: none;"></video>
+        <div class="center text color-white" style="text-align: center;">
+          <img src="img/mainmenu.png" alt="">
+          <p class="text color-muted" id="versionText" style="margin-bottom: 24px;">Version: Latest</p>
+          <div class="center-horizontal flex">
+            <button type="button" id="launchBtn" class="btn-lg btn-green-transparent flex-child text color-white" onclick="launchGame()" style="width: 300px;">
+              <div id="launchBtnLaunching" style="display: none;">
+                <div class="dot-flashing inline" id="dotBricksAnimation"></div>
+              </div>
+              <div id="launchBtnIdle" style="display: none;">
+                <h2><span class="mdi mdi-play"></span> Play</h2>
+              </div>
+              <div id="launchBtnInstall" style="display: block;">
+                <h2><span class="mdi mdi-download"></span> Install</h2>
+              </div>
+            </button>
+          </div>
+        </div>
+        <div class="popup hidden" id="loginWindow" style="width: 40%; height: 50%;"> <!-- LOGIN PROMPT -->
+          <h1 class="text color-white bg-transparent center-horizontal">Login</h1>
+          <div class="center">
+            <p class="text color-white">E-Mail</p>
+            <input type="text" id="emailBox" class="entry-text">
+            <p class="text color-white">Password</p>
+            <input type="text" id="psswdBox" class="entry-text">
+          </div>
+          <button class="btn btn-primary center-horizontal bottom" onclick="saveLogin()" style="margin-bottom: 5px;">Save</button>
+        </div>
+        <div class="popup hidden" id="settingsWindow" style="width: 40%; height: 40%;"> <!-- SETTINGS PROMPT -->
+          <h1 class="text color-white bg-transparent center-horizontal">Settings</h1>
+          <div class="center text color-white" style="text-align: center;">
+            <button class="btn btn-sm btn-transparent color-white">Reset Launcher</button>
+            <button class="btn btn-sm btn-transparent color-white">Reset Minecraft</button>
+            <!-- <button class="btn btn-sm btn-transparent color-white" onclick="videoEnabled = toggleVideo(videoEnabled)">Toggle Video</button> -->
+            <button class="btn btn-sm btn-transparent color-white" onclick="theme = toggleTheme(theme)" id="themeToggler">Toggle Theme</button>
+            <button class="btn btn-sm btn-transparent color-white">About App</button>
+          </div>
+          <button class="btn btn-primary center-horizontal bottom" onclick="saveSettings()" style="margin-bottom: 5px;">Close</button>
+        </div>
+        <div class="popup hidden text color-white" id="jdkInstaller" style="width: 60%; height: 40%; text-align: center;"> <!-- JDK INSTALL PROMPT -->
+          <h1 class="text color-white bg-transparent">Install JDK16</h1>
+          <p style="margin: 8px;">JDK16 (Java Development Kit 16) is known to fix some probloms with Minecraft 1.17. If you are experincing crashes while tying to start Minecraft, mabey it would be a good idea to install JDK16, if not, just stick with your current version of Java.</p>
+          <div class="flex center-horizontal" style="width: 75%;">
+            <button class="flex-child btn btn-primary" style="margin-right: 8px;" onclick="installJDK()">Install</button>
+            <button class="flex-child btn btn-red color-white" onclick="closeMenu('jdkInstaller')">Cancel</button>
+          </div>
+        </div>
+        <div class="popup hidden" id="testWindow" style="width: 80%; height: 70%;"> <!-- TEST PROMPT -->
+          <div class="center text color-white" style="text-align: center;">
+            <button class="btn btn-sm btn-transparent color-white" onclick="showSnackBar('testSnackbar')">Test Snackbar</button>
+            <button class="btn btn-sm btn-transparent color-white" onclick="ipcTest()">Test IPC</button>
+            <div>
+              pri
+              <button class="btn-toast btn-primary">btn-toast</button>
+              <button class="btn-sm btn-primary">btn-sm</button>
+              <button class="btn btn-primary">btn</button>
+              <button class="btn-lg btn-primary">btn-lg</button>
+            </div>
+            <div>
+              sec
+              <button class="btn-toast btn-secondary">btn-toast</button>
+              <button class="btn-sm btn-secondary">btn-sm</button>
+              <button class="btn btn-secondary">btn</button>
+              <button class="btn-lg btn-secondary">btn-lg</button>
+            </div>
+            <div>
+              red
+              <button class="btn-toast btn-red">btn-toast</button>
+              <button class="btn-sm btn-red">btn-sm</button>
+              <button class="btn btn-red">btn</button>
+              <button class="btn-lg btn-red">btn-lg</button>
+            </div>
+            <div>
+              gre
+              <button class="btn-toast btn-green">btn-toast</button>
+              <button class="btn-sm btn-green">btn-sm</button>
+              <button class="btn btn-green">btn</button>
+              <button class="btn-lg btn-green">btn-lg</button>
+            </div>
+            <div>
+              tra
+              <button class="btn-toast btn-transparent">btn-toast</button>
+              <button class="btn-sm btn-transparent">btn-sm</button>
+              <button class="btn btn-transparent">btn</button>
+              <button class="btn-lg btn-transparent">btn-lg</button>
+            </div>
+          </div>
+          <button class="btn btn-primary center-horizontal bottom" onclick="closeMenu('testWindow')" style="margin-bottom: 5px;">Close</button>
+        </div>
+        <div class="popup hidden" id="versionWindow" style="width: 40%; height: 50%; text-align: center;"> <!-- VERSION PROMPT -->
+          <h1 class="text color-white bg-transparent center-horizontal">Select Version</h1>
+          <div class="center text color-white">
+            <button class="btn-sm btn-transparent color-white" onclick="setVersion('Latest')">Latest (1.0)</button>
+            <button class="btn-sm btn-transparent color-white" onclick="setVersion('0.9')">0.9</button>
+          </div>
+          <button class="btn btn-primary center-horizontal bottom" onclick="saveVersion()" style="margin-bottom: 5px;">Close</button>
+        </div>
+        <div class="popup hidden" id="networkDisconnectWindow" style="width: 40%; height: 50%; text-align: center;"> <!-- NETWORK PROMPT -->
+          <h1 class="text color-white bg-transparent center-horizontal">No Connection</h1>
+          <p class="center text color-white">Please connect to the Internet then restart the app.</p>
+          <button class="btn btn-primary center-horizontal bottom" onclick="window.close()" style="margin-bottom: 5px;">Close</button>
+        </div>
+    </div>
+    <script src="renderer.js"></script>
+    <script>
+      let theme = "dark";
+      let videoEnabled = false;
+    </script>
+</div>
+</body>
+</html>

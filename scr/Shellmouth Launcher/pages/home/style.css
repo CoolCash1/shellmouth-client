@@ -1,0 +1,615 @@
+:root {
+  --primary: rgb(0, 108, 248);
+  --primary-light: rgb(67, 149, 255);
+  --secondary: rgb(116, 116, 116);
+  --secondary-light: rgb(136, 136, 136);
+  --secondary-menu: rgba(116, 116, 116, 0.96);
+  --warn: rgb(214, 193, 0);
+  --warn-light: rgb(255, 230, 0);
+  --error: rgb(238, 29, 29);
+  --error-light: rgb(245, 96, 96);
+  --muted: rgb(77, 77, 77);
+  --muted-menu: rgba(77, 77, 77, 0.9);
+  --bg: rgb(7, 7, 61);
+  --bg-header: rgb(0, 0, 29);
+  --header-icon: white;
+  --theme-text: white;
+  /* --bg-light: rgb(236, 236, 236);
+  --bg-header-light: rgb(190, 190, 190); */
+}
+
+@font-face {
+  font-family: materialIcons;
+  src: url(https://fonts.gstatic.com/s/materialicons/v92/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2);
+}
+
+.text {
+  font-family: Verdana;
+}
+
+.h1 {
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.h2 {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.h3 {
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+.flex-child {
+  -webkit-box-flex: 1 1 auto;
+  -moz-box-flex:  1 1 auto;
+  -webkit-flex:  1 1 auto;
+  -ms-flex:  1 1 auto;
+  flex:  1 1 auto;
+}
+
+/* This is a cool pop up system for settings, login etc */
+.popup {
+  z-index: 9;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  display: block; /* Keep display off untill the menu is triggered */
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 5px;
+  background-color: var(--secondary-menu);
+}
+ 
+.animated {
+  transition: ease;
+  transition-duration: 250ms;
+}
+
+/* Hide popup */
+.hidden {
+  display: none;
+}
+
+.bgvid {
+  z-index: -1;
+  overflow: hidden;
+}
+
+.btn {
+  border-radius: 6px;
+  height: 45px;
+  text-size-adjust: 36px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-style: solid;
+  transition: ease;
+  transition-duration: 250ms;
+  background-color: rgba(0, 0, 0, 0.36);
+  border-color: rgba(0, 0, 0, 0.71);
+  border-width: 3px;
+}
+
+.btn-toast {
+  border-radius: 2px;
+  height: 20px;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-style: solid;
+  transition: ease;
+  transition-duration: 250ms;
+  color: var(--primary);
+}
+
+.btn-sm {
+  border-radius: 2px;
+  height: 25px;
+  text-size-adjust: 16px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-style: solid;
+  transition: ease;
+  transition-duration: 250ms;
+}
+
+.btn-lg {
+  border-radius: 8px;
+  height: 60px;
+  text-size-adjust: 48px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-style: solid;
+  transition: ease;
+  transition-duration: 250ms;
+}
+
+.btn-primary {
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-light);
+}
+
+.btn-primary:active {
+  background-color: var(--primary);
+  transition: none
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+  border-color: var(--secondary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--secondary-light);
+}
+
+.btn-secondary:active {
+  background-color: var(--secondary);
+  transition: none
+}
+
+.btn-green {
+  background-color: rgb(19, 188, 19);
+  border-color: rgb(19, 188, 19);
+}
+
+.btn-green:hover {
+  background-color: rgb(78, 219, 78);
+}
+
+.btn-green:active {
+  background-color: rgb(19, 188, 19);
+  transition: none
+}
+
+.btn-green-transparent {
+  background-color: rgba(19, 188, 19, 0.5);
+  border-width: 0px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.btn-green-transparent:hover {
+  background-color: rgba(78, 219, 78, 0.75);
+}
+
+/* Point 99 cause caiden wanted it */
+.btn-green-transparent:active {
+  background-color: rgba(19, 188, 19, 0.99);
+  transition: none
+}
+
+.btn-green-transparent:disabled {
+  background-color: rgba(161, 161, 161, 0.5);
+}
+
+.btn-red {
+  background-color: rgb(221, 34, 50);
+  border-color: rgb(221, 34, 50);
+  
+}
+
+.btn-red:hover {
+  background-color: rgb(217, 141, 148);
+}
+
+.btn-red:active {
+  background-color: rgb(221, 34, 50);
+  transition: none
+}
+
+.btn-transparent {
+  background-color: transparent;
+  border-color: transparent;
+  
+}
+
+.btn-transparent:hover {
+  background-color: rgba(230, 230, 230, 0.25);
+}
+
+.btn-transparent:active {
+  background-color: rgba(117, 117, 117, 0.25);;
+  transition: none
+}
+
+.btn-outline-gry {
+  border-color: var(--muted);
+}
+
+.header-dark {
+  background-color: var(--bg-header);
+  padding: 5px;
+  z-index: 3;
+}
+
+.header-dark-icon {
+  color: var(--header-icon);
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-center {
+  float: center;
+}
+
+.text-align-center {
+  text-align: ceter;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.color-white {
+  color: white;
+}
+
+.color-black {
+  color: black;
+}
+
+.color-error {
+  color: var(--error);
+}
+
+.color-green {
+  color: green;
+}
+
+.color-primary {
+  color: var(--primary);
+}
+
+.color-secondary {
+  color: var(--secondary);
+}
+
+.color-muted {
+  color: var(--muted);
+}
+
+.color-theme-text {
+  color: var(--theme-text)
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.btn-secondary {
+  background-color: var(--secondary);
+}
+
+.bg-green {
+  background-color: green;
+}
+
+.bg-red {
+  background-color: red;
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.rounded-sm {
+  border-radius: 2px;
+}
+
+.rounded-md {
+  border-radius: 4px;
+}
+
+.rounded-lg {
+  border-radius: 6px;
+}
+
+.roudned-xl {
+  border-radius: 8px;
+}
+
+.bottom {
+  bottom: 0;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.center-vertical {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.center-horizontal {
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.entry-text {
+  border-color: rgb(0, 190, 0);
+  border-style: solid;
+  height: 20px;
+  border-width: 2px;
+  border-radius: 2px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  text-align: left;
+  background-color: var(--bg-header);
+  width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.dropdown-icon {
+  color: var(--theme-text);
+  margin-right: 8px
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+.snackbar {
+  z-index: 0;
+  background-color: var(--bg-header);
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+  width: 225px;
+  max-height: 48px;
+  border-radius: 4px;
+  margin: 4px;
+  display: none;
+  text-align: center;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.snackbar-show {
+  display: block;
+  animation: showSnackbar 0.5s, hideSnackbar 1s 20s;
+}
+
+/* Animations to fade the snackbar in and out */
+@keyframes showSnackbar {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes hideSnackbar {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+/* Disable Selection */
+:not(input):not(textarea),
+:not(input):not(textarea)::after,
+:not(input):not(textarea)::before {
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: default;
+}
+/* input, button, textarea, :focus {
+    outline: none; // You should add some other style for :focus to help UX/a11y
+} */
+
+.inline {
+  display:inline-block;
+  margin-right:5px;
+}
+
+.windowDragBar {
+  -webkit-app-region: drag;
+}
+
+.noDrag {
+  -webkit-app-region: no-drag;
+}
+
+ /* DOT BRICKS ANIMATION BY ZONGBIN */
+
+.dot-bricks-show {
+  animation: dotBricksFadeIn 2s;
+}
+
+@keyframes dotBricksFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.dot-bricks {
+  position: relative;
+  top: 8px;
+  left: -9999px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: var(--primary);
+  color: var(--primary);
+  box-shadow: 9991px -16px 0 0 var(--primary), 9991px 0 0 0 var(--primary), 10007px 0 0 0 var(--primary);
+  animation: dotBricks 2s infinite ease;
+}
+
+@keyframes dotBricks {
+  0% {
+    box-shadow: 9991px -16px 0 0 var(--primary), 9991px 0 0 0 var(--primary), 10007px 0 0 0 var(--primary);
+  }
+  8.333% {
+    box-shadow: 10007px -16px 0 0 var(--primary), 9991px 0 0 0 var(--primary), 10007px 0 0 0 var(--primary);
+  }
+  16.667% {
+    box-shadow: 10007px -16px 0 0 var(--primary), 9991px -16px 0 0 var(--primary), 10007px 0 0 0 var(--primary);
+  }
+  25% {
+    box-shadow: 10007px -16px 0 0 var(--primary), 9991px -16px 0 0 var(--primary), 9991px 0 0 0 var(--primary);
+  }
+  33.333% {
+    box-shadow: 10007px 0 0 0 var(--primary), 9991px -16px 0 0 var(--primary), 9991px 0 0 0 var(--primary);
+  }
+  41.667% {
+    box-shadow: 10007px 0 0 0 var(--primary), 10007px -16px 0 0 var(--primary), 9991px 0 0 0 var(--primary);
+  }
+  50% {
+    box-shadow: 10007px 0 0 0 var(--primary), 10007px -16px 0 0 var(--primary), 9991px -16px 0 0 var(--primary);
+  }
+  58.333% {
+    box-shadow: 9991px 0 0 0 var(--primary), 10007px -16px 0 0 var(--primary), 9991px -16px 0 0 var(--primary);
+  }
+  66.666% {
+    box-shadow: 9991px 0 0 0 var(--primary), 10007px 0 0 0 var(--primary), 9991px -16px 0 0 var(--primary);
+  }
+  75% {
+    box-shadow: 9991px 0 0 0 var(--primary), 10007px 0 0 0 var(--primary), 10007px -16px 0 0 var(--primary);
+  }
+  83.333% {
+    box-shadow: 9991px -16px 0 0 var(--primary), 10007px 0 0 0 var(--primary), 10007px -16px 0 0 var(--primary);
+  }
+  91.667% {
+    box-shadow: 9991px -16px 0 0 var(--primary), 9991px 0 0 0 var(--primary), 10007px -16px 0 0 var(--primary);
+  }
+  100% {
+    box-shadow: 9991px -16px 0 0 var(--primary), 9991px 0 0 0 var(--primary), 10007px 0 0 0 var(--primary);
+  }
+}
+
+
+/* ANOTHER DOT ANIMATION */
+.dot-flashing {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dotFlashing 1s infinite linear alternate;
+  animation-delay: .5s;
+}
+
+.dot-flashing::before, .dot-flashing::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  top: 0;
+}
+
+.dot-flashing::before {
+  left: -15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 0s;
+}
+
+.dot-flashing::after {
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  background-color: #9880ff;
+  color: #9880ff;
+  animation: dotFlashing 1s infinite alternate;
+  animation-delay: 1s;
+}
+
+@keyframes dotFlashing {
+  0% {
+    background-color: #9880ff;
+  }
+  50%,
+  100% {
+    background-color: #ebe6ff;
+  }
+}
+
+ /* END DOT BRICKS ANIMATION */
+
+ /* The sidebar menu */
+.sidenav {
+  height: 100%; /* Full-height: remove this if you want "auto" height */
+  width: 160px; /* Set the width of the sidebar */
+  position: fixed; /* Fixed Sidebar (stay in place on scroll) */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 20px;
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Style page content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidebar */
+  padding: 0px 10px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

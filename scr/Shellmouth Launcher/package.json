@@ -1,0 +1,29 @@
+{
+  "name": "shellmouth-launcher",
+  "version": "1.0.0",
+  "description": "Easily launch Shellmouth Client",
+  "main": "main.js",
+  "author": "Cashton Harmer",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^13.1.8"
+  },
+  "dependencies": {
+    "@material/progress-indicator": "^11.0.0",
+    "@mdi/font": "^5.9.55",
+    "extsprintf": "^1.4.0",
+    "isstream": "^0.1.2",
+    "mc-ping": "0.0.3-0",
+    "mc-ping-updated": "^0.1.1",
+    "minecraft-launcher-core": "^3.16.4",
+    "minecraft-ping": "^1.0.0",
+    "node-cmd": "^4.0.0",
+    "psl": "^1.8.0",
+    "safer-buffer": "^2.1.2",
+    "shell": "^0.8.4",
+    "wordwrap": "^1.0.0"
+  }
+}

@@ -1,0 +1,7 @@
+scr/Shellmouth Launcher/node_modules
+
+# Rehosting Minecraft is against EULA
+scr/shellmouth-core/ShellmouthCore/run
+
+# Config.json holds login credentials, so hide that from git
+scr/Shellmouth Launcher/config.json 
